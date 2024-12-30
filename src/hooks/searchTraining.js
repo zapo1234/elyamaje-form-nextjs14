@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import { getAlltraining } from '../service/trainings/trainingService'; 
 
-// Hook personnalisé pour la recherche de formations
+// Hook pour le fitre des formation dans le input.
 const useSearchTrainings = () => {
   const [formations, setFormations] = useState([]);
   const [filteredFormations, setFilteredFormations] = useState([]); 
@@ -25,10 +25,10 @@ const useSearchTrainings = () => {
     loadFormations(); 
   }, []);
 
-  // Fonction pour filtrer les formations par titre (commence par la recherche)
+  // Fonction pour filtrer les formations
   const handleSearch = (query) => {
     setSearchQuery(query); 
-
+      // a partir du 3 eme caractère
     if (query.length >= 3) {
       // Filtrer les formations par titre qui commence par la recherche
       const filtered = formations.filter((formation) =>
