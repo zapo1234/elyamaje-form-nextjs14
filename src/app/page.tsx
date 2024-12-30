@@ -11,23 +11,6 @@ const HomePage = () => {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
 
-  useEffect(() => {
-    const loadFormations = async () => {
-      try {
-        const response = await getAlltraining(); // Appel au service API
-        setFormations(response.data); // Stockage des données dans l'état
-      } catch (err) {
-      
-      } finally {
-        setLoading(false);
-      }
-    };
-
-    loadFormations(); // Appel de la fonction pour charger les formations
-  }, []);
-
- // recupérer le nombre de formation
- const numbertraining = countTrainings(formations);
   return (
     <div>
       <Header />

@@ -1,4 +1,4 @@
-// services/formationService.ts
+
 /**
  * URL de l'API pour récupérer les données des utilisateurs.
  * @constant {string}
