@@ -1,0 +1,46 @@
+/* Style de base du footer */
+.footer {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 colonnes égales */
+    gap: 20px; /* Espacement entre les colonnes */
+    padding: 40px;
+    background-color:black;
+    color: #333;
+  }
+  
+  .footer-section {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .footer-section h3 {
+    margin-bottom: 10px;
+    font-size: 18px;
+    font-weight: bold;
+  }
+  
+  .footer-section ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .footer-section li {
+    margin-bottom: 5px;
+    font-size: 14px;
+  }
+  
+  /* Styles responsives : à partir de 768px, nous passons à 2 colonnes */
+  @media (max-width: 768px) {
+    .footer {
+      grid-template-columns: repeat(2, 1fr); /* 2 colonnes pour les écrans plus petits */
+    }
+  }
+  
+  /* Styles responsives : à partir de 480px, nous passons à 1 colonne */
+  @media (max-width: 480px) {
+    .footer {
+      grid-template-columns: 1fr; /* 1 colonne pour les écrans très petits */
+    }
+  }
+  

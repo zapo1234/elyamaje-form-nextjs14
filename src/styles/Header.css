@@ -1,0 +1,272 @@
+/* Style du header */
+.header {
+  /* Rendre le header fixe */
+  position: fixed;
+  top: 0; /* Fixe le header en haut de la page */
+  left: 0; /* Aligne le header à gauche */
+  width: 100%; /* Le header occupe toute la largeur de l'écran */
+  z-index: 1000; /* Assure que le header soit au-dessus des autres éléments */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: white;
+  color: black;
+  gap: 20px; /* Utilisation de gap pour espacer les éléments de manière uniforme */
+   /* Box-shadow dégradé */
+   box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1), /* Ombre plus douce à l'intérieur */
+   0px 2px 10px rgba(0, 0, 0, 0.2); /* Ombre plus nette à l'extérieur */
+
+/* Bordure solide visible */
+border: 2px solid white; /* Bordure solide noire, visible et nette */
+border-radius: 8px; 
+}
+
+/* Logo */
+.logo {
+  flex: 1;  /* Assure que le logo n'occupe que l'espace nécessaire */
+  margin-right: 5px; /* Réduit l'espacement entre le logo et la navigation */
+}
+
+.logo img {
+  width: 150px; /* Spécifie la largeur du logo */
+  height: auto;  /* Garde la proportion du logo */
+}
+
+/* Navigation */
+.navigation ul {
+  display: flex;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.navigation li {
+  margin: 0 15px; /* Espace entre les éléments du menu */
+}
+
+.navigation a {
+  color: #333; /* Couleur par défaut des liens */
+    text-decoration: none;
+    font-size: 0.8rem; /* Taille de police élégante */
+    font-family: 'Roboto', sans-serif; /* Police moderne */
+    letter-spacing: 1px; /* Espacement entre les lettres pour plus de lisibilité */
+    position: relative;
+    padding: 5px 0;
+    transition: all 0.3s ease; /* Transition fluide pour les effets de survol */
+}
+
+/* Search input */
+.search-container {
+  flex: 2;
+  display: flex;
+  justify-content: center;
+  border: 2px solid grey;
+  border-radius: 5px;
+  padding: 2px;
+}
+
+.search-input {
+  width: 80%;
+  padding: 8px;
+  font-size: 16px;
+  border-radius: 10px;
+  border: none;
+}
+
+.search-container {
+  position: relative; /* Nécessaire pour positionner l'icône à l'intérieur de l'input */
+  flex: 2;
+  display: flex;
+  justify-content: center;
+}
+
+.search-input {
+  width: 100%;
+  padding: 8px 10px 8px 30px; /* Espacement à gauche pour l'icône */
+  font-size: 16px;
+  border-radius: 5px;
+  border: 1px solid grey;
+  box-sizing: border-box; /* Pour éviter les débordements */
+  transition: border-color 0.3s ease; /* Transition douce pour la couleur du bord */
+}
+
+
+/* Container de la barre de recherche */
+.search-container {
+  position: relative; /* Position relative pour que les résultats s'affichent correctement sous l'input */
+  width: 100%; /* Prendre toute la largeur disponible */
+}
+
+/* Champ de recherche */
+.search-input {
+  width: 100%; /* Prendre toute la largeur de son parent (search-container) */
+  padding: 10px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  font-size: 16px;
+  box-sizing: border-box; /* Assure que le padding n'augmente pas la largeur */
+}
+
+/* Conteneur des résultats de recherche */
+.search-results {
+  position: absolute; /* Positionner la div des résultats sous l'input */
+  top: 100%; /* Placer juste en dessous de l'input */
+  left: 60%; /* Centrer horizontalement par rapport au parent */
+  transform: translateX(-50%); /* Déplacer de moitié de sa largeur pour centrer parfaitement */
+  width: 38%; /* Prendre toute la largeur de l'input */
+  background-color: white;
+  border: 2px solid white;
+  border-top: none; /* Pas de bordure en haut pour éviter un double bord avec l'input */
+  max-height: 200px; /* Limiter la hauteur pour éviter que la liste de résultats soit trop longue */
+  overflow-y: auto; /* Ajouter une barre de défilement si nécessaire */
+  z-index: 1000; /* Assurer que la liste soit au-dessus des autres éléments */
+  box-sizing: border-box; /* Assurer que la largeur de la div reste correcte avec les marges/paddings */
+}
+
+/* Liste des résultats */
+.search-results ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* Élément de chaque résultat */
+.search-results li {
+  padding: 15px;
+  cursor: pointer;
+  font-size: 14px;
+  color: #333;
+  font-weight: 600;
+}
+
+/* Style au survol de chaque élément */
+.search-results li:hover {
+  background-color: #f0f0f0;
+}
+
+
+/* Icône de recherche à gauche */
+.search-icon {
+  position: absolute;
+  left: 10px; /* Positionne l'icône à gauche */
+  top: 50%; /* Centrer verticalement */
+  transform: translateY(-50%); /* Centrer précisément */
+  font-size: 14px; /* Taille de l'icône */
+  color: #888; /* Couleur grise pour l'icône */
+  transition: color 0.3s ease; /* Transition pour changer la couleur au survol */
+}
+
+/* Effet de survol sur l'icône */
+.search-icon:hover {
+  color: #4CAF50; /* Change la couleur de l'icône au survol */
+}
+
+/* Changer la couleur de la bordure de l'input au focus */
+.search-input:focus {
+  border-color: #4CAF50; /* Bordure verte au focus */
+  outline: none; /* Supprime l'effet de focus par défaut */
+}
+
+/* Actions (Login, Register, Cart) */
+.actions {
+  display: flex;
+  align-items: center;
+}
+
+/* Buttons (Login, Register) */
+.btn {
+  margin: 0 10px;
+  padding: 8px 15px;
+  font-size: 12px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  background-color:black;
+  color: white;
+  font-weight: 600;
+}
+
+.btns {
+  margin: 0;
+    padding: 8px 20px;  /* Ajuste la largeur intérieure pour plus d'espace */
+    font-size: 12px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    background-color:white;
+    color:black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+   border:2px solid black;
+   font-weight: 600;
+
+}
+
+/* Cart icon */
+.cart-icon {
+  font-size: 24px;
+  margin-left: 20px;
+  cursor: pointer;
+}
+
+
+/* Masquer la navigation et la barre de recherche sur mobile */
+@media screen and (max-width: 768px) {
+  .navigation {
+    display: none; /* Cache la navigation */
+  }
+
+  .search-container {
+    display: none; /* Cache la barre de recherche */
+  }
+
+  /* Agrandir le logo sur mobile */
+  .logo img {
+    width: 180px; /* Agrandir le logo */
+    height: auto;
+  }
+
+  /* Agrandir les boutons sur mobile */
+  .btn, .btns {
+    padding: 12px 20px; /* Augmenter la taille des boutons */
+    font-size: 14px; /* Agrandir le texte */
+  }
+
+  /* Agrandir l'icône du panier */
+  .cart-icon {
+    font-size: 28px; /* Agrandir l'icône du panier */
+  }
+
+  /* Ajuster la taille de la police des boutons */
+  .btns, .btn {
+    font-size: 14px; /* Augmenter la taille de la police sur mobile */
+  }
+}
+
+/* --- Pour les très petits écrans (moins de 480px) --- */
+@media screen and (max-width: 480px) {
+  /* Réduire la taille du logo encore plus pour les très petits écrans */
+  .logo img {
+    width: 200px;
+    height: auto;
+  }
+
+  /* Réduire légèrement les boutons et l'icône du panier */
+  .btn, .btns {
+    padding: 10px 16px; /* Ajuster la taille des boutons */
+    font-size: 12px; /* Taille de la police réduite */
+  }
+
+  .cart-icon {
+    font-size: 24px; /* Ajuster l'icône du panier pour les très petits écrans */
+  }
+
+  /* Agrandir les boutons sur mobile */
+  .btn, .btns {
+    padding: 12px 10px; /* Augmenter la taille des boutons */
+    font-size: 12px; /* Agrandir le texte */
+  }
+
+}
