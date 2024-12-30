@@ -3,7 +3,7 @@ import { fetchFormations } from '../service/trainings/serviceTraining';  // Assu
 import { Training } from '../types/typeTraining';
 
 
-// Définir les états possibles pour la récupération des formations
+// Définir les états des datas
 interface UseFormationsResult {
   data: Training[] | null;
   loading: boolean;
