@@ -5,5 +5,6 @@ export type Training = {
     description: string;
     image: string;
     presentation:string;
+    sommeNote : number;
   };
   

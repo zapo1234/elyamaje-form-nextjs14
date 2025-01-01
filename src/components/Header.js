@@ -3,7 +3,7 @@ import React, { useState, useEffect } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faShoppingCart } from '@fortawesome/free-solid-svg-icons';
 import '../styles/Header.css';
-import useSearchTrainings from '../hooks/searchTraining'; // Import du hook personnalisé
+import useSearchTrainings from '../hooks/searchTraining'; // Import du hook 
 import { getAlltraining } from '../service/trainings/trainingService'; // Import du service API
 import { countTrainings } from '../utils/training/countTraining';
 

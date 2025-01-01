@@ -5,6 +5,7 @@ import Header from '../components/Header';
 import '../styles/Home.css'; 
 import { getAlltraining } from '../service/trainings/trainingService'; // Import du service API
 import { countTrainings } from '../utils/training/countTraining';
+import Footer from '../components/Footer'; 
 
 const HomePage = () => {
   const [formations, setFormations] = useState([]);
@@ -68,6 +69,7 @@ const HomePage = () => {
           </div>
         </div>
       </main>
+      <Footer />
     </div>
   );
 }
