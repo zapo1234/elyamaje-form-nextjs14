@@ -12,7 +12,7 @@ import { Training } from '../../types/typeTraining';  // Importation via le fich
  * @param limit - Le nombre d'éléments par page (par défaut 11).
  * @returns Les formations correspondant à la page demandée.
  */
-export async function fetchFormations(page: number = 1, limit: number = 11): Promise<Training[]> {
+export async function fetchFormations(page: number = 1, limit: number = 19): Promise<Training[]> {
   // Construction de l'URL avec les paramètres de pagination
   const url = `${API_URL}/getAllTrainings?page=${page}&limit=${limit}`;
 
@@ -26,5 +26,5 @@ export async function fetchFormations(page: number = 1, limit: number = 11): Pro
   const responses = data.data;  
   
   // Renvoyer les formations selon la pagination (limitées à `limit`)
-  return responses.slice(0, 11) as Training[];
+  return responses.slice(0, 19) as Training[];
 }

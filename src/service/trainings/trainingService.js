@@ -4,8 +4,6 @@
  */
 const API_URL = 'https://dev.e-learning.elyamaje.com/trainings';
 
-//const API_URL = process.env.REACT_APP_API_ROUTE;
-
 /**
  * Récupère la liste de tous les trainings de puis staging
  */

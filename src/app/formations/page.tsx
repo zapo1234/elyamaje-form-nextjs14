@@ -5,6 +5,7 @@ import Header from '../../components/Header';
 import '../../styles/Formation.css';
 import '../../styles/Header.css';
 import { useFormations } from '../../hooks/getAllTraining'; // Assurez-vous que ce hook est bien configuré
+import Link from 'next/link';
 
 // Composant Stars pour afficher les étoiles
 const Stars = ({ sommeNote }: { sommeNote: number }) => {
@@ -23,7 +24,7 @@ const Stars = ({ sommeNote }: { sommeNote: number }) => {
 const FormationPage = () => {
   const { data, loading, error, setPage, currentPage } = useFormations();
 
-  const itemsPerPage = 4; // Nombre d'éléments à afficher par page
+  const itemsPerPage = 5; // Nombre d'éléments à afficher par page
   const totalItems = data ? data.length : 0;
   const totalPagesCount = Math.ceil(totalItems / itemsPerPage); // Nombre total de pages
   
@@ -71,9 +72,9 @@ const FormationPage = () => {
               <Stars sommeNote={formation.sommeNote} />
 
               {/* Bouton "Voir plus" avec un lien */}
-                <a href={`/formation/${formation.title}`} className="btn-voir-plus">
-                   Voir plus
-               </a>
+              <Link href={`/formations/${formation._id}`} legacyBehavior>
+              <a className="btn-voir-plus">Voir plus</a>
+              </Link>
             </div>
           ))}
         </div>
